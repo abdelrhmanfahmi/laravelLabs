@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Requests\StorePostRequest;
 use App\Post;
 use App\Comment;
-class PostRequest extends Controller
+class PostController extends Controller
 {
     public function index(){
       $getData = Post::paginate(3);

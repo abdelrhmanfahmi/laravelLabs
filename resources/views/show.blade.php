@@ -19,7 +19,6 @@
       <td>{{$getDataById->description}}</td>
       <td>{{$getDataById->created_at}}</td>
     </tr>
-    @endforeach
   </tbody>
 </table>
 </div>

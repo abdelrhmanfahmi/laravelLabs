@@ -22,15 +22,15 @@ Route::get('/Logout' , function(){
 
 
 Route::group(['middleware' => 'auth'] , function(){
-	Route::get('/posts' , 'PostRequest@index')->name('posts.index');
-	Route::get('/posts/create' , 'PostRequest@create')->name('posts.create');
-	Route::post('/posts' , 'PostRequest@store')->name('posts.store');
-	Route::get('/posts/{post}' , 'PostRequest@show')->name('posts.show');
-	Route::get('/posts/{post}/edit' , 'PostRequest@edit')->name('posts.edit');
-	Route::PUT('/posts/{post}' , 'PostRequest@update')->name('posts.update');
-	Route::DELETE('/posts/{post}' , 'PostRequest@destroy')->name('posts.destroy');
-	Route::get('/comments/{comment}' , 'PostRequest@ShowComment')->name('comment.ShowComment');
-	Route::post('/comments/{id}' , 'PostRequest@StoreComment')->name('comment.StoreComment');
+	Route::get('/posts' , 'PostController@index')->name('posts.index');
+	Route::get('/posts/create' , 'PostController@create')->name('posts.create');
+	Route::post('/posts' , 'PostController@store')->name('posts.store');
+	Route::get('/posts/{post}' , 'PostController@show')->name('posts.show');
+	Route::get('/posts/{post}/edit' , 'PostController@edit')->name('posts.edit');
+	Route::PUT('/posts/{post}' , 'PostController@update')->name('posts.update');
+	Route::DELETE('/posts/{post}' , 'PostController@destroy')->name('posts.destroy');
+	Route::get('/comments/{comment}' , 'PostController@ShowComment')->name('comment.ShowComment');
+	Route::post('/comments/{id}' , 'PostController@StoreComment')->name('comment.StoreComment');
 });
 Auth::routes();
 
