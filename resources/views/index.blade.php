@@ -35,7 +35,7 @@
       <td>{{$key->title}}</td>
       <td>{{$key->slug}}</td>
 
-      <td> <img src="{{ URL::to('/images/downloadsssss.jpg') }}"></td>
+      <td> <img src="{{  asset('/images/'.$key->img) }}"></td>
 
       
       <td>{{$key->created_at->format('Y-M-d')}}</td>
